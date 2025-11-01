@@ -1,11 +1,11 @@
-# WebXR Framework Physics Example
+# Graspable.dev - WebXR Immersive Web SDK Template
 
 This is the official physics example project for the WebXR Framework, designed for optimal developer, designer, and tech artist workflow.
 
 ## 📁 Project Structure
 
 ```
-physics/
+graspable-base-iwsdk/
 ├── src/                    # Source code
 │   ├── index.js           # Main application entry point
 │   ├── settings.js        # Settings configuration
@@ -38,21 +38,21 @@ physics/
 ### Installation
 
 ```bash
-cd physics
-pnpm install
+cd graspable-base-iwsdk
+npm install
 ```
 
 ### Development
 
 ```bash
 # Start development server with HTTPS
-pnpm dev
+npm dev
 
 # Build for production
-pnpm build
+npm build
 
 # Preview production build locally
-pnpm preview
+npm preview
 ```
 
 The development server will start at `https://localhost:8081` with automatic HTTPS certificates.
@@ -150,9 +150,9 @@ The `vite.config.js` file includes:
 
 ## 📋 Scripts
 
-- **`pnpm dev`** - Start development server with HMR and HTTPS
-- **`pnpm build`** - Build for production
-- **`pnpm preview`** - Preview production build locally
+- **`npm dev`** - Start development server with HMR and HTTPS
+- **`npm build`** - Build for production
+- **`npm preview`** - Preview production build locally
 
 ## 🔗 Integration
 
