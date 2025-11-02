@@ -67,11 +67,17 @@ export default defineConfig({
   ],
 
   // Development server configuration
+  // server: {
+  //   https: true,
+  //   host: '0.0.0.0',
+  //   port: 8081,
+  //   open: true,
+  // },
+
   server: {
-    https: true,
-    host: '0.0.0.0',
-    port: 8081,
-    open: true,
+    port: 3000,
+    allowedHosts: true,
+    host: "0.0.0.0"
   },
 
   // Build configuration
