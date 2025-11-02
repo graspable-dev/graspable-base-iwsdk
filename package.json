@@ -21,10 +21,7 @@
     "@iwsdk/vite-plugin-iwer": "^0.1.0",
     "@iwsdk/vite-plugin-metaspatial": "^0.1.0",
     "@iwsdk/vite-plugin-uikitml": "^0.1.0",
-    "vite": "^7.1.4",
+    "vite": "^6.3.1",
     "vite-plugin-mkcert": "^1.17.0"
-  },
-  "engines": {
-    "node": ">=20.19.0"
   }
 }
