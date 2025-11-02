@@ -32,7 +32,7 @@ graspable-base-iwsdk/
 
 ### Prerequisites
 
-- Node.js 20.19.0+ and pnpm
+- Node.js 20.19.0+ or 22.12.0+ (required for Vite 7.x and crypto.hash support)
 - HTTPS support for WebXR development
 
 ### Installation
