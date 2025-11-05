@@ -12,12 +12,12 @@ import {
 import { injectIWER } from '@iwsdk/vite-plugin-iwer';
 import { compileUIKit } from '@iwsdk/vite-plugin-uikitml';
 import { defineConfig } from 'vite';
-import mkcert from 'vite-plugin-mkcert';
+// import mkcert from 'vite-plugin-mkcert';
 
 export default defineConfig({
   plugins: [
     // HTTPS support for WebXR development
-    mkcert(),
+    // mkcert(), // disabled for dev server environments in Freestyle.sh
 
     // WebXR emulation runtime injection
     injectIWER({
