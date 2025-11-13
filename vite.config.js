@@ -5,52 +5,52 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-// import {
-//   discoverComponents,
-//   generateGLXF,
-// } from '@iwsdk/vite-plugin-metaspatial';
-// import { injectIWER } from '@iwsdk/vite-plugin-iwer';
-// import { compileUIKit } from '@iwsdk/vite-plugin-uikitml';
+import {
+  discoverComponents,
+  generateGLXF,
+} from '@iwsdk/vite-plugin-metaspatial';
+import { injectIWER } from '@iwsdk/vite-plugin-iwer';
+import { compileUIKit } from '@iwsdk/vite-plugin-uikitml';
 import { defineConfig } from 'vite';
-// import mkcert from 'vite-plugin-mkcert';
+import mkcert from 'vite-plugin-mkcert';
 
 export default defineConfig({
   plugins: [
     // HTTPS support for WebXR development
-    // mkcert(), // disabled for dev server environments in Freestyle.sh
+    mkcert(), // disabled for dev server environments in Freestyle.sh
 
-    // // WebXR emulation runtime injection
-    // injectIWER({
-    //   device: 'metaQuest3',
-    //   // sem: {
-    //   //   defaultScene: 'living_room'
-    //   // },
-    //   activation: 'always',
-    //   verbose: true,
-    // }),
+    // WebXR emulation runtime injection
+    injectIWER({
+      device: 'metaQuest3',
+      // sem: {
+      //   defaultScene: 'living_room'
+      // },
+      activation: 'always',
+      verbose: true,
+    }),
 
-    // // Component discovery plugin for XML generation
-    // discoverComponents({
-    //   outputDir: 'metaspatial/components',
-    //   include: /\.(js|ts|jsx|tsx)$/,
-    //   exclude: /node_modules/,
-    //   verbose: false,
-    // }),
+    // Component discovery plugin for XML generation
+    discoverComponents({
+      outputDir: 'metaspatial/components',
+      include: /\.(js|ts|jsx|tsx)$/,
+      exclude: /node_modules/,
+      verbose: false,
+    }),
 
-    // // GLXF generation plugin with file watcher
-    // generateGLXF({
-    //   metaSpatialDir: 'metaspatial',
-    //   outputDir: 'public/glxf', // Match the manual CLI test output
-    //   verbose: false,
-    //   enableWatcher: true, // Enable file watcher
-    // }),
+    // GLXF generation plugin with file watcher
+    generateGLXF({
+      metaSpatialDir: 'metaspatial',
+      outputDir: 'public/glxf', // Match the manual CLI test output
+      verbose: false,
+      enableWatcher: true, // Enable file watcher
+    }),
 
-    // // UIKit compilation plugin
-    // compileUIKit({
-    //   sourceDir: 'ui',
-    //   outputDir: 'public/ui',
-    //   verbose: true, // Enable verbose logging for testing
-    // }),
+    // UIKit compilation plugin
+    compileUIKit({
+      sourceDir: 'ui',
+      outputDir: 'public/ui',
+      verbose: true, // Enable verbose logging for testing
+    }),
 
     // Watch public folder for config changes
     {
@@ -67,18 +67,18 @@ export default defineConfig({
   ],
 
   // Development server configuration
-  // server: {
-  //   https: true,
-  //   host: '0.0.0.0',
-  //   port: 8081,
-  //   open: true,
-  // },
-
   server: {
-    port: 3000,
-    allowedHosts: true,
-    host: "0.0.0.0"
+    https: true,
+    host: '0.0.0.0',
+    port: 8081,
+    open: true,
   },
+
+  // server: {
+  //   port: 3000,
+  //   allowedHosts: true,
+  //   host: "0.0.0.0"
+  // },
 
   // Build configuration
   build: {
